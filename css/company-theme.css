@@ -203,7 +203,7 @@
   /* jumbotron padding */
   .jumbotron {
     padding: 100px;
-    background-color: var(--theme-primary-color) !important;
+    background-color: var(--theme-primary-color);
     color: var(--theme-secondary-color);
   }
 
@@ -408,18 +408,17 @@
 
       /* modal header background-color, glyphicon, & text color */
       #logo-color-modal .modal-header, #logo-color-modal h4 {
-        background-color: var(--theme-primary-color) !important;
-        color: var(--theme-secondary-color) !important;
+        background-color: var(--theme-primary-color); /* #595959; /* dark grey */
+        color: var(--theme-secondary-color); /* #ffffff; */
       }
 
       /* modal header close button styling */
       #logo-color-modal .close {
-        padding: 5px 10px !important;
         opacity: 1;
         color: var(--theme-secondary-color) !important;
         font-size: 25px;
         border-radius:5px;
-        border: 1px solid var(--theme-secondary-color) !important;
+        width: 25px;
       }
 
       /* modal header hover close button styling */
@@ -434,7 +433,7 @@
 
       /* background-color surrounding tabs & tab body content inside modal body */
       .modal-body {
-        background-color: hsl(0, 4%, 61%) !important; /* grey */
+        background-color: #e6e6e6 !important; /* grey */
       }
 
       /* BEGIN TABS: tab only (not tab body content) */
@@ -489,6 +488,20 @@
           border-left: 1px solid #000000;
           border-right: 1px solid #000000;
           border-bottom: 1px solid #000000;
+        }
+
+        /* submit color change button: color of submit button */
+        #logo-color-modal .modal-body .btn-color {
+          background-color: #e6e6e6; /* light grey */
+          border: 1px solid #808080;
+          color: #000000;
+        }
+
+        /* submit color change button: color of hover submit button */
+        #logo-color-modal .modal-body .btn-color:hover {
+          background-color: #d9d9d9; /* grey */
+          border: 1px solid #737373;
+          color: #000000;
         }
 
         /* BEGIN QUICK THEME COLOR PICKER TAB BODY CONTENT */
@@ -548,19 +561,21 @@
 
       /* modal footer background-color */
       #logo-color-modal .modal-footer {
-        background-color: var(--theme-primary-color) !important;
+        background-color: #f2f2f2 !important;
       }
 
       /* modal footer button background-color & button text color */
       #logo-color-modal .modal-footer .btn-color {
-        background-color: var(--theme-primary-color) !important;
-        color: var(--theme-secondary-color);
+        background-color: #e6e6e6;
+        border: 1px solid #808080;
+        color: #000000;
       }
 
       /* modal footer hover button background-color & hover button text color */
       #logo-color-modal .modal-footer .btn-color:hover {
-        background-color: var(--theme-secondary-color) !important;
-        color: var(--theme-primary-color);
+        background-color: #d9d9d9; /* grey */
+        border: 1px solid #737373;
+        color: #000000;
       }
 
     /* END COLOR MODAL FOOTER */

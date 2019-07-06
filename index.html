@@ -362,8 +362,8 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><span class="glyphicon glyphicon-th"></span> Theme Color Palette</h4>
+          <button type="button" class="close"  onclick="window.location.reload()">&times;</button>
+          <h4 class="modal-title text-center"><span class="glyphicon glyphicon-th"></span> Theme Color Palette</h4>
         </div>
 
         <div class="modal-body">
@@ -380,6 +380,9 @@
 
               <!-- quick theme colors picker -->
               <div id="quick-theme-colors" class="tab-pane fade in active">
+                <div class="text-center" style="padding:4px 4px 0 4px">
+                  <button type="button" class="btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                </div>
                 <div class="row spacing">
                   <!-- red -->
                   <div class="col-sm-1 col-xs-3">
@@ -518,6 +521,9 @@
 
               <!-- spectrum theme primary color picker -->
               <div id="theme-primary-color" class="tab-pane fade">
+                <div class="text-center" style="padding:4px 4px 0 4px">
+                  <button type="button" class="btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                </div>
                 <form class="text-center" style="width:100%; height:100%">
                   <input id="spectrum-theme-primary-color-picker" type='text' />
                 </form>
@@ -525,6 +531,9 @@
 
               <!-- spectrum theme secondary color picker -->
               <div id="theme-secondary-color" class="tab-pane fade">
+                <div class="text-center" style="padding:4px 4px 0 4px">
+                  <button type="button" class="btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                </div>
                 <form class="text-center" style="width:100%; height:100%">
                   <input id="spectrum-theme-secondary-color-picker" type='text' />
                 </form>
@@ -536,7 +545,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-color pull-left" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-color pull-left" onclick="window.location.reload()">Close</button>
         </div>
       </div>
 
