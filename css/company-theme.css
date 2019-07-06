@@ -202,7 +202,7 @@
 
   /* jumbotron padding */
   .jumbotron {
-    padding: 100px;
+    padding: 100px 0;
     background-color: var(--theme-primary-color);
     color: var(--theme-secondary-color);
   }
@@ -274,19 +274,26 @@
 
   /* BEGIN CAROUSEL */
 
-    /* carousel title label (located on top of carousel): position & color of carousel label */
-    #myCarousel h2 {
+    /* carousel container used to position carousel title label located on top of carousel */
+    #myCarousel-container {
       position: relative;
-      top: 50px;
-      margin: 0;
-      padding: 0;
+    }
+
+    /* position carousel title label & carousel title label color */
+    #myCarousel-container h2 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      top: 100px;
       color: var(--theme-secondary-color);
     }
 
-    /* carousel background-color & padding on bottom of inside of carousel */
+    /* carousel background-color & container for carousel item text horizontal & vertical positioning */
     #myCarousel {
       background-color: var(--theme-primary-color) !important;
-      padding: 0 0 100px 0;
+      line-height: 300px;
+      height: 300px;
+      text-align: center;
     }
 
     /* adds margin bottom space (grey space from class .bg-grey) to bottom of carousel */
@@ -294,15 +301,23 @@
       margin: 0 0 80px 0;
     }
 
-    /* carousel item text vertical positioning & carousel item h3 text color */
-    .item h3 {
-      margin: 95px 0 0 0;
+    /* carousel item text vertical positioning & carousel item h4 text color */
+    .item h4 {
+      line-height: 1.5;
+      display: inline-block;
+      vertical-align: middle;
       color: var(--theme-secondary-color);
+      max-width: 300px;
     }
 
-    /* carousel item p text color */
-    .item p {
-      color: var(--theme-secondary-color);
+    /* bold item h4 span first child text */
+    .item h4 span:nth-child(1) {
+      font-weight: bold;
+    }
+
+    /* italicize item h4 span third child text since second child is a break */
+    .item h4 span:nth-child(3) {
+      font-style: italic;
     }
 
     /* carousel previous & next arrow color */
@@ -310,6 +325,11 @@
       /* Background-image around previous & next arrows is included here.
       To remove background-image around previous & next arrows, insert "background-image: none;" into the code here. */
       color: var(--theme-secondary-color);
+    }
+
+    /* position carousel circle indicators */
+    .carousel-indicators {
+      bottom: -100px;
     }
 
     /* border-color for carousel circle indicator */

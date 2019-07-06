@@ -67,7 +67,7 @@
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>ABOUT COMPANY PAGE</h2>
+      <h2>ABOUT COMPANY</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
     <div class="col-sm-4 text-center">
@@ -169,33 +169,23 @@
 </div>
 
 <!-- carousel subsection -->
-<div class="container-fluid bg-grey">
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <h2>What our customers say</h2>
-
-    <!-- circle indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+<div id="myCarousel-container" class="container-fluid bg-grey">
+  <h2 class="slide-animation">What our customers say</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <!-- wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <h3>Utah</h3>
-        <p>The hikes in SLC are incredible!</p>
+        <h4><span>Utah</span><br /><span>The hikes in SLC are amazing!</span></h4>
       </div>
 
       <div class="item">
-        <h3>Hawaii</h3>
-        <p>Hawaii has such beautiful islands!</p>
+        <h4><span>Hawaii</span><br /><span>Hawaii has such beautiful islands!</span></h4>
       </div>
 
       <div class="item">
-        <h3>Uintas</h3>
-        <p>Camping out under the stars is an adventure of a lifetime!</p>
+        <h4><span>Uintas</span><br /><span>The stars are incredible!</span></h4>
       </div>
 
     </div>
@@ -209,6 +199,14 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
+
+    <!-- circle indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
   </div>
 </div>
 
@@ -362,7 +360,10 @@
       <div class="modal-content">
 
         <div class="modal-header">
-          <button type="button" class="btn btn-lg close"  onclick="window.location.reload()"><span class="glyphicon glyphicon-remove"></span></button>
+          <!-- visible only on mobile devices such as tablets & phones (hidden on desktops): color does not stick without refreshing page. -->
+          <button type="button" class="visible-sm visible-xs btn btn-lg close"  onclick="window.location.reload()"><span class="glyphicon glyphicon-remove"></span></button>
+          <!-- visible only on desktops (hidden on tablets & phones) -->
+          <button type="button" class="visible-lg visible-md btn btn-lg close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
           <h4 class="modal-title text-center"><span class="glyphicon glyphicon-th"></span> Theme Color Palette</h4>
         </div>
 
@@ -381,7 +382,10 @@
               <!-- quick theme colors picker -->
               <div id="quick-theme-colors" class="tab-pane fade in active">
                 <div class="text-center" style="padding:4px 4px 0 4px">
-                  <button type="button" class="btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                  <!-- visible only on mobile devices such as tablets & phones (hidden on desktops) -->
+                  <button type="button" class="visible-sm visible-xs btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                  <!-- visible only on desktops (hidden on tablets & phones) -->
+                  <button type="button" class="visible-lg visible-md btn btn-color btn-block" data-dismiss="modal">Submit Color Change</button>
                 </div>
                 <div class="row spacing">
                   <!-- red -->
@@ -522,7 +526,10 @@
               <!-- spectrum theme primary color picker -->
               <div id="theme-primary-color" class="tab-pane fade">
                 <div class="text-center" style="padding:4px 4px 0 4px">
-                  <button type="button" class="btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                  <!-- visible only on mobile devices such as tablets & phones (hidden on desktops) -->
+                  <button type="button" class="visible-sm visible-xs btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                  <!-- visible only on desktops (hidden on tablets & phones) -->
+                  <button type="button" class="visible-lg visible-md btn btn-color btn-block" data-dismiss="modal">Submit Color Change</button>
                 </div>
                 <form class="text-center" style="width:100%; height:100%">
                   <input id="spectrum-theme-primary-color-picker" type='text' />
@@ -532,7 +539,10 @@
               <!-- spectrum theme secondary color picker -->
               <div id="theme-secondary-color" class="tab-pane fade">
                 <div class="text-center" style="padding:4px 4px 0 4px">
-                  <button type="button" class="btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                  <!-- visible only on mobile devices such as tablets & phones (hidden on desktops) -->
+                  <button type="button" class="visible-sm visible-xs btn btn-color btn-block" onclick="window.location.reload()">Submit Color Change</button>
+                  <!-- visible only on desktops (hidden on tablets & phones) -->
+                  <button type="button" class="visible-lg visible-md btn btn-color btn-block" data-dismiss="modal">Submit Color Change</button>
                 </div>
                 <form class="text-center" style="width:100%; height:100%">
                   <input id="spectrum-theme-secondary-color-picker" type='text' />
@@ -545,7 +555,10 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-color pull-left" onclick="window.location.reload()">Close</button>
+          <!-- visible only on mobile devices such as tablets & phones (hidden on desktops) -->
+          <button type="button" class="visible-sm visible-xs btn btn-color pull-left" onclick="window.location.reload()">Close</button>
+          <!-- visible only on desktops (hidden on tablets & phones) -->
+          <button type="button" class="visible-lg visible-md btn btn-color pull-left" data-dismiss="modal">Close</button>
         </div>
       </div>
 
