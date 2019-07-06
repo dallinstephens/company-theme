@@ -415,6 +415,8 @@
       /* modal header close button styling */
       #logo-color-modal .close {
         opacity: 1;
+        padding: 5px 7px;
+        font-size: 15px;
         color: #ffffff;
         border: 1px solid #ffffff;
       }
@@ -604,8 +606,8 @@
       /* sign up modal header close button styling */
       #sign-up .close {
         opacity: 1;
+        padding: 5px 7px;
         color: var(--theme-secondary-color) !important;
-        font-size: 40px;
         border: 1px solid var(--theme-secondary-color);
       }
 
@@ -680,8 +682,8 @@
       /* login modal header close button styling */
       #login .close {
         opacity: 1;
+        padding: 5px 7px;
         color: var(--theme-secondary-color) !important;
-        font-size: 40px;
         border: 1px solid var(--theme-secondary-color);
       }
 
@@ -765,8 +767,8 @@
       /* forgot password modal header close button styling */
       #forgot-password .close {
         opacity: 1;
+        padding: 5px 7px;
         color: var(--theme-secondary-color) !important;
-        font-size: 40px;
         border: 1px solid var(--theme-secondary-color);
       }
 
