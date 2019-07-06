@@ -200,9 +200,12 @@
 
 /* BEGIN WEBSITE HEADER */
 
-  /* jumbotron */
+  /* jumbotron padding */
   .jumbotron {
     padding: 100px;
+  }
+
+  .jumbotron-color {
     background-color: var(--theme-primary-color) !important;
     color: var(--theme-secondary-color);
   }
