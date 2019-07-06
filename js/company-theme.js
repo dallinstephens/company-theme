@@ -76,14 +76,17 @@ $(document).ready(function(){
 
     // BEGIN TAB BODY CONTENT
 
+
+      let root = document.documentElement;
+
       // when the page loads, css variable --theme-primary-color will remain the default theme primary color while localStorage.themePrimaryColor is undefined; when the user selects a color in the color modal, localStorage.themePrimaryColor becomes defined and when the page loads again, css variable --theme-primary-color becomes the stored color in localStorage.themePrimaryColor.
       if (localStorage.themePrimaryColor !== undefined) {
-        document.documentElement.style.setProperty('--theme-primary-color', localStorage.themePrimaryColor);
+        root.style.setProperty('--theme-primary-color', localStorage.themePrimaryColor);
       }
 
       // when the page loads, css variable --theme-secondary-color will remain the default theme secondary color while localStorage.themeSecondaryColor is undefined; when the user selects a color in the color modal, localStorage.themeSecondaryColor becomes defined and when the page loads again, css variable --theme-secondary-color becomes the stored color in localStorage.themeSecondaryColor.
       if (localStorage.themeSecondaryColor !== undefined) {
-        document.documentElement.style.setProperty('--theme-secondary-color', localStorage.themeSecondaryColor);
+        root.style.setProperty('--theme-secondary-color', localStorage.themeSecondaryColor);
       }
 
       // BEGIN QUICK THEME COLOR PICKER TAB BODY CONTENT
@@ -92,8 +95,8 @@ $(document).ready(function(){
         function changeThemeColors(themePrimaryColor, themeSecondaryColor) {
           localStorage.themePrimaryColor = themePrimaryColor;
           localStorage.themeSecondaryColor = themeSecondaryColor;
-          document.documentElement.style.setProperty('--theme-primary-color', localStorage.themePrimaryColor);
-          document.documentElement.style.setProperty('--theme-secondary-color', localStorage.themeSecondaryColor);
+          root.style.setProperty('--theme-primary-color', localStorage.themePrimaryColor);
+          root.style.setProperty('--theme-secondary-color', localStorage.themeSecondaryColor);
         }
 
       // END QUICK THEME COLOR PICKER TAB BODY CONTENT
@@ -113,7 +116,7 @@ $(document).ready(function(){
               containerClassName: 'spectrum-color-picker',
               move: function(color) {
                 localStorage.themePrimaryColor = color.toHexString();
-                document.documentElement.style.setProperty('--theme-primary-color', localStorage.themePrimaryColor);
+                root.style.setProperty('--theme-primary-color', localStorage.themePrimaryColor);
               },
               showPalette: true,
               showSelectionPalette: true,
@@ -143,7 +146,7 @@ $(document).ready(function(){
               containerClassName: 'spectrum-color-picker',
               move: function(color) {
                 localStorage.themeSecondaryColor = color.toHexString();
-                document.documentElement.style.setProperty('--theme-secondary-color', localStorage.themeSecondaryColor);
+                root.style.setProperty('--theme-secondary-color', localStorage.themeSecondaryColor);
               },
               showPalette: true,
               color: localStorage.themeSecondaryColor,
