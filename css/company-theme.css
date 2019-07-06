@@ -416,9 +416,7 @@
       #logo-color-modal .close {
         opacity: 1;
         color: #ffffff;
-        font-size: 25px;
-        border-radius:5px;
-        width: 25px;
+        border: 1px solid #ffffff;
       }
 
       /* modal header hover close button styling */
@@ -568,6 +566,7 @@
       #logo-color-modal .modal-footer .btn-color {
         background-color: transparent;
         color: #ffffff;
+        border: 1px solid #ffffff;
       }
 
       /* modal footer hover button background-color & hover button text color */
@@ -604,11 +603,9 @@
 
       /* sign up modal header close button styling */
       #sign-up .close {
-        width: 40px;
         opacity: 1;
         color: var(--theme-secondary-color) !important;
         font-size: 40px;
-        border-radius:5px;
         border: 1px solid var(--theme-secondary-color);
       }
 
@@ -682,11 +679,9 @@
 
       /* login modal header close button styling */
       #login .close {
-        width: 40px;
         opacity: 1;
         color: var(--theme-secondary-color) !important;
         font-size: 40px;
-        border-radius:5px;
         border: 1px solid var(--theme-secondary-color);
       }
 
@@ -769,11 +764,9 @@
 
       /* forgot password modal header close button styling */
       #forgot-password .close {
-        width: 40px;
         opacity: 1;
         color: var(--theme-secondary-color) !important;
         font-size: 40px;
-        border-radius:5px;
         border: 1px solid var(--theme-secondary-color);
       }
 
@@ -819,6 +812,7 @@
       #forgot-password .modal-footer .btn-color {
         background-color: var(--theme-primary-color);
         color: var(--theme-secondary-color);
+        border: 1px solid var(--theme-secondary-color);
       }
 
       /* forgot password modal footer button hover styling */
