@@ -203,9 +203,6 @@
   /* jumbotron padding */
   .jumbotron {
     padding: 100px;
-  }
-
-  .jumbotron-color {
     background-color: var(--theme-primary-color) !important;
     color: var(--theme-secondary-color);
   }
@@ -534,13 +531,10 @@
             border: 1px solid transparent;
           }
 
-          /* 100% width & remove palette on smaller screens */
+          /* 100% width on smaller screens */
           @media only screen and (max-width: 700px){
             .spectrum-color-picker > div {
               width: 95.5%;
-            }
-            .sp-palette {
-              display: none;
             }
           }
 
