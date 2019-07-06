@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Company Theme</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src='spectrum/spectrum.js'></script>
+  <link rel='stylesheet' href='spectrum/spectrum.css' />
+  <link rel='stylesheet' href='css/company-theme.css' />
+  <script src='js/company-theme.js'></script>
+</head>
+<!-- scrollspy body tag attributes -->
+<body id="top-of-page" data-spy="scroll" data-target=".navbar">
+
+<!-- BEGIN NAVIGATION BAR -->
+
+<nav class="navbar navbar-fixed-top" data-offset-top="97">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="logo" class="navbar-brand" data-toggle="modal" data-target="#logo-color-modal" data-backdrop="false">
+        <span class="glyphicon glyphicon-fire"></span>
+        <span>Logo</span>
+        <span class="caret"></span><!-- dropdown arrow -->
+      </a>
+    </div>
+
+    <div id="myNavbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#about">ABOUT</a></li>
+		    <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#sign-up" style="background-color: var(--theme-primary-color); color: #ffffff"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#login" style="background-color: var(--theme-primary-color); color: #ffffff"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- END NAVIGATION BAR -->
+
+<!-- BEGIN WEBSITE HEADER: jumbotron -->
+
+<div class="jumbotron text-center">
+  <h1>Company</h1>
+  <p>We specialize in...</p>
+</div>
+
+<!-- END WEBSITE HEADER: jumbotron -->
+
+<!-- BEGIN ABOUT SECTION -->
+
+<!-- about subsection -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>ABOUT COMPANY PAGE</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="col-sm-4 text-center">
+      <span class="glyphicon glyphicon-blackboard glyphicon-size glyphicon-theme-color"></span>
+    </div>
+  </div>
+</div>
+
+<!-- strategy subsection -->
+<div id="strategy" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4 text-center slide-animation">
+      <span class="glyphicon glyphicon-knight glyphicon-size glyphicon-theme-color"></span>
+    </div>
+    <div class="col-sm-8 slide-animation">
+      <h2>OUR STRATEGY</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+<!-- END ABOUT SECTION -->
+
+<!-- BEGIN SERVICES SECTION -->
+
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <p>What we offer</p>
+  <div class="row">
+    <div class="col-sm-4 slide-animation">
+      <span class="glyphicon glyphicon-fire glyphicon-theme-color"></span>
+      <h4>ENTHUSIASM</h4>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <span class="glyphicon glyphicon-heart glyphicon-theme-color"></span>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <span class="glyphicon glyphicon-signal glyphicon-theme-color"></span>
+      <h4>PERFORMANCE</h4>
+      <p>Lorem ipsum...</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 slide-animation">
+      <span class="glyphicon glyphicon-eye-open glyphicon-theme-color"></span>
+      <h4>VISION</h4>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <span class="glyphicon glyphicon-thumbs-up glyphicon-theme-color"></span>
+      <h4>TEAMWORK</h4>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <span class="glyphicon glyphicon-wrench glyphicon-theme-color"></span>
+      <h4>SMART WORK ETHIC</h4>
+      <p>Lorem ipsum...</p>
+    </div>
+  </div>
+</div>
+
+<!-- END SERVICES SECTION -->
+
+<!-- BEGIN PORTFOLIO SECTION -->
+
+<!-- polaroid image cards subsection -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>PORTFOLIO</h2>
+  <p>What we created</p>
+  <div class="row">
+    <div class="col-sm-4 slide-animation">
+      <div class="thumbnail polaroid" onclick="openImageModal(this.children[0].src, this.children[0].alt)">
+        <img src="images/treerock.jpg" alt="Trees" style="width:100%" />
+        <div class="caption">
+          <p>Click to enlarge</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <div class="thumbnail polaroid" onclick="openImageModal(this.children[0].src, this.children[0].alt)">
+        <img src="images/island.jpg" alt="Island" style="width:100%" />
+        <div class="caption">
+          <p>Click to enlarge</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <div class="thumbnail polaroid" onclick="openImageModal(this.children[0].src, this.children[0].alt)">
+        <img src="images/starlight.jpg" alt="Stars" style="width:100%" />
+        <div class="caption">
+          <p>Click to enlarge</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- carousel subsection -->
+<div class="container-fluid bg-grey">
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <h2>What our customers say</h2>
+
+    <!-- circle indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <h3>Utah</h3>
+        <p>The hikes in SLC are incredible!</p>
+      </div>
+
+      <div class="item">
+        <h3>Hawaii</h3>
+        <p>Hawaii has such beautiful islands!</p>
+      </div>
+
+      <div class="item">
+        <h3>Uintas</h3>
+        <p>Camping out under the stars is an adventure of a lifetime!</p>
+      </div>
+
+    </div>
+
+    <!-- left & right arrow controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- END PORTFOLIO SECTION -->
+
+<!-- BEGIN PRICING SECTION -->
+
+<!-- polaroid pricing panels -->
+<div id="pricing" class="container text-center">
+  <h2>PRICING</h2>
+  <p>Choose a payment plan that works for you</p>
+  <div class="row">
+    <div class="col-sm-4 slide-animation">
+      <div class="panel panel-default" data-toggle="modal" data-target="#sign-up">
+        <div class="panel-heading">BASIC</div>
+        <div class="panel-body">
+          <ul class="text-left">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+          </ul>
+          <h3>US $9.99/month</h3>
+        </div>
+        <div class="panel-footer">
+          <p>Lorem ipsum dolor sit amet</p>
+          <div style="padding:5px">
+            <button type="button" class="btn btn-color btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <div class="panel panel-default text-center" data-toggle="modal" data-target="#sign-up">
+        <div class="panel-heading">PRO</div>
+        <div class="panel-body">
+          <ul class="text-left">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+          </ul>
+          <h3>US $19.99/month</h3>
+        </div>
+        <div class="panel-footer">
+          <p>Lorem ipsum dolor sit amet</p>
+          <div style="padding:5px">
+            <button type="button" class="btn btn-color btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 slide-animation">
+      <div class="panel panel-default text-center" data-toggle="modal" data-target="#sign-up">
+        <div class="panel-heading">PREMIUM</div>
+        <div class="panel-body">
+          <ul class="text-left">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+          </ul>
+          <h3>US $52.99/month</h3>
+        </div>
+        <div class="panel-footer">
+          <p>Lorem ipsum dolor sit amet</p>
+          <div style="padding:5px">
+            <button type="button" class="btn btn-color btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END PRICING SECTION -->
+
+<!-- BEGIN CONTACT SECTION -->
+
+<div id="contact" class="container-fluid bg-grey">
+  <div class="text-center">
+    <h2>CONTACT</h2>
+  </div>
+
+  <div class="row">
+
+    <!-- contact information -->
+    <div id="contact-info" class="col-sm-6 slide-animation">
+      <p>Contact us and we'll get back with you within 24 hours.</p>
+      <div>
+        <span class="glyphicon glyphicon-globe glyphicon-theme-color"></span>
+        <span>North Salt Lake, UT</span>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-phone glyphicon-theme-color"></span>
+        <span>(801) 203-0086</span>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-envelope glyphicon-theme-color"></span>
+        <span>dallinstephens1@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- contact form -->
+    <div id="contact-form" class="col-sm-6 slide-animation">
+      <form action="">
+        <div class="form-group">
+          <input type="text" class="form-control" id="usr" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="5" id="comment" placeholder="Comment"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-default btn-theme-color" onclick="alert('Thank you! Your contact information has been sent.')">Send</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- END CONTACT SECTION -->
+
+<!-- BEGIN LARGE IMAGE: full width of website page -->
+
+<img src="images/city.jpg" alt="City" width="100%" />
+
+<!-- END LARGE IMAGE: full width of website page -->
+
+<!-- BEGIN WEBSITE FOOTER -->
+
+<footer class="text-center" style="padding:50px">
+  <a href="#top-of-page">
+    <span class="glyphicon glyphicon-chevron-up glyphicon-theme-color"></span>
+  </a>
+  <br /><br />
+  <div>Bootstrap Theme Made By Dallin Stephens</div>
+</footer>
+
+<!-- END WEBSITE FOOTER -->
+
+<!-- BEGIN MODALS -->
+
+  <!-- BEGIN COLOR MODAL: modal opens upon click of navbar group link (fire glyphicon, logo, & dropdown arrow). -->
+
+  <div id="logo-color-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><span class="glyphicon glyphicon-th"></span> Theme Color Palette</h4>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="container-fluid">
+
+            <ul class="nav nav-tabs row" style="margin:0">
+              <li class="active col-xs-4"><a data-toggle="tab" href="#quick-theme-colors" title="Quick Theme Colors">&#127752;</a></li>
+              <li class="col-xs-4"><a data-toggle="tab" href="#theme-primary-color" title="Theme Primary Color"><span class="glyphicon glyphicon-fire glyphicon-size" style="color:var(--theme-primary-color)"></span></a></li>
+              <li class="col-xs-4"><a data-toggle="tab" href="#theme-secondary-color" title="Theme Secondary Color"><span class="glyphicon glyphicon-fire glyphicon-size" style="color:var(--theme-secondary-color)"></span></a></li>
+            </ul>
+
+            <div class="tab-content">
+
+              <!-- quick theme colors picker -->
+              <div id="quick-theme-colors" class="tab-pane fade in active">
+                <div class="row spacing">
+                  <!-- red -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(0, 100%, 85%)" onclick="changeThemeColors('hsl(0, 100%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 100%, 75%)" onclick="changeThemeColors('hsl(0, 100%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 100%, 65%)" onclick="changeThemeColors('hsl(0, 100%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 100%, 55%)" onclick="changeThemeColors('hsl(0, 100%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 100%, 45%)" onclick="changeThemeColors('hsl(0, 100%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 100%, 35%)" onclick="changeThemeColors('hsl(0, 100%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 100%, 25%)" onclick="changeThemeColors('hsl(0, 100%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 100%, 15%)" onclick="changeThemeColors('hsl(0, 100%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- orange -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(12, 100%, 85%)" onclick="changeThemeColors('hsl(12, 100%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(12, 100%, 75%)" onclick="changeThemeColors('hsl(12, 100%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(12, 100%, 65%)" onclick="changeThemeColors('hsl(12, 100%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(12, 100%, 55%)" onclick="changeThemeColors('hsl(12, 100%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(12, 100%, 45%)" onclick="changeThemeColors('hsl(12, 100%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(12, 100%, 35%)" onclick="changeThemeColors('hsl(12, 100%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(12, 100%, 25%)" onclick="changeThemeColors('hsl(12, 100%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(12, 100%, 15%)" onclick="changeThemeColors('hsl(12, 100%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- yellow -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(60, 100%, 85%)" onclick="changeThemeColors('hsl(60, 100%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(60, 100%, 75%)" onclick="changeThemeColors('hsl(60, 100%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(60, 100%, 65%)" onclick="changeThemeColors('hsl(60, 100%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(60, 100%, 55%)" onclick="changeThemeColors('hsl(60, 100%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(60, 100%, 45%)" onclick="changeThemeColors('hsl(60, 100%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(60, 100%, 35%)" onclick="changeThemeColors('hsl(60, 100%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(60, 100%, 25%)" onclick="changeThemeColors('hsl(60, 100%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(60, 100%, 15%)" onclick="changeThemeColors('hsl(60, 100%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- green -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(140, 100%, 85%)" onclick="changeThemeColors('hsl(140, 100%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(140, 100%, 75%)" onclick="changeThemeColors('hsl(140, 100%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(140, 100%, 65%)" onclick="changeThemeColors('hsl(140, 100%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(140, 100%, 55%)" onclick="changeThemeColors('hsl(140, 100%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(140, 100%, 45%)" onclick="changeThemeColors('hsl(140, 100%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(140, 100%, 35%)" onclick="changeThemeColors('hsl(140, 100%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(140, 100%, 25%)" onclick="changeThemeColors('hsl(140, 100%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(140, 100%, 15%)" onclick="changeThemeColors('hsl(140, 100%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- turquoise -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(174, 72%, 85%)" onclick="changeThemeColors('hsl(174, 72%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(174, 72%, 75%)" onclick="changeThemeColors('hsl(174, 72%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(174, 72%, 65%)" onclick="changeThemeColors('hsl(174, 72%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(174, 72%, 55%)" onclick="changeThemeColors('hsl(174, 72%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(174, 72%, 45%)" onclick="changeThemeColors('hsl(174, 72%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(174, 72%, 35%)" onclick="changeThemeColors('hsl(174, 72%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(174, 72%, 25%)" onclick="changeThemeColors('hsl(174, 72%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(174, 72%, 15%)" onclick="changeThemeColors('hsl(174, 72%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- blue -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(220, 60%, 85%)" onclick="changeThemeColors('hsl(220, 60%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(220, 60%, 75%)" onclick="changeThemeColors('hsl(220, 60%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(220, 60%, 65%)" onclick="changeThemeColors('hsl(220, 60%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(220, 60%, 55%)" onclick="changeThemeColors('hsl(220, 60%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(220, 60%, 45%)" onclick="changeThemeColors('hsl(220, 60%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(220, 60%, 35%)" onclick="changeThemeColors('hsl(220, 60%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(220, 60%, 25%)" onclick="changeThemeColors('hsl(220, 60%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(220, 60%, 15%)" onclick="changeThemeColors('hsl(220, 60%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- purple -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(276, 100%, 85%)" onclick="changeThemeColors('hsl(276, 100%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(276, 100%, 75%)" onclick="changeThemeColors('hsl(276, 100%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(276, 100%, 65%)" onclick="changeThemeColors('hsl(276, 100%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(276, 100%, 55%)" onclick="changeThemeColors('hsl(276, 100%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(276, 100%, 45%)" onclick="changeThemeColors('hsl(276, 100%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(276, 100%, 35%)" onclick="changeThemeColors('hsl(276, 100%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(276, 100%, 25%)" onclick="changeThemeColors('hsl(276, 100%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(276, 100%, 15%)" onclick="changeThemeColors('hsl(276, 100%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- pink -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(350, 100%, 85%)" onclick="changeThemeColors('hsl(350, 100%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(350, 100%, 75%)" onclick="changeThemeColors('hsl(350, 100%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(350, 100%, 65%)" onclick="changeThemeColors('hsl(350, 100%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(350, 100%, 55%)" onclick="changeThemeColors('hsl(350, 100%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(350, 100%, 45%)" onclick="changeThemeColors('hsl(350, 100%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(350, 100%, 35%)" onclick="changeThemeColors('hsl(350, 100%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(350, 100%, 25%)" onclick="changeThemeColors('hsl(350, 100%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(350, 100%, 15%)" onclick="changeThemeColors('hsl(350, 100%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- brown -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(30, 50%, 85%)" onclick="changeThemeColors('hsl(30, 50%, 85%)', '#000000')"></div>
+                    <div style="background-color: hsl(30, 50%, 75%)" onclick="changeThemeColors('hsl(30, 50%, 75%)', '#000000')"></div>
+                    <div style="background-color: hsl(30, 50%, 65%)" onclick="changeThemeColors('hsl(30, 50%, 65%)', '#000000')"></div>
+                    <div style="background-color: hsl(30, 50%, 55%)" onclick="changeThemeColors('hsl(30, 50%, 55%)', '#000000')"></div>
+                    <div style="background-color: hsl(30, 50%, 45%)" onclick="changeThemeColors('hsl(30, 50%, 45%)', '#000000')"></div>
+                    <div style="background-color: hsl(30, 50%, 35%)" onclick="changeThemeColors('hsl(30, 50%, 35%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(30, 50%, 25%)" onclick="changeThemeColors('hsl(30, 50%, 25%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(30, 50%, 15%)" onclick="changeThemeColors('hsl(30, 50%, 15%)', '#ffffff')"></div>
+                  </div>
+                  <!-- white -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(0, 0%, 100%)" onclick="changeThemeColors('hsl(0, 0%, 100%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 94%)" onclick="changeThemeColors('hsl(0, 0%, 94%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 89%)" onclick="changeThemeColors('hsl(0, 0%, 89%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 84%)" onclick="changeThemeColors('hsl(0, 0%, 84%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 79%)" onclick="changeThemeColors('hsl(0, 0%, 79%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 74%)" onclick="changeThemeColors('hsl(0, 0%, 74%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 69%)" onclick="changeThemeColors('hsl(0, 0%, 69%)', '#000000')"></div>
+                    <div style="background-color: hsl(0, 0%, 64%)" onclick="changeThemeColors('hsl(0, 0%, 64%)', '#000000')"></div>
+                  </div>
+                  <!-- grey -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(0, 0%, 60%)" onclick="changeThemeColors('hsl(0, 0%, 60%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 56%)" onclick="changeThemeColors('hsl(0, 0%, 56%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 52%)" onclick="changeThemeColors('hsl(0, 0%, 52%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 48%)" onclick="changeThemeColors('hsl(0, 0%, 48%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 44%)" onclick="changeThemeColors('hsl(0, 0%, 44%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 40%)" onclick="changeThemeColors('hsl(0, 0%, 40%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 36%)" onclick="changeThemeColors('hsl(0, 0%, 36%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 32%)" onclick="changeThemeColors('hsl(0, 0%, 32%)', '#ffffff')"></div>
+                  </div>
+                  <!-- black -->
+                  <div class="col-sm-1 col-xs-3">
+                    <div style="background-color: hsl(0, 0%, 28%)" onclick="changeThemeColors('hsl(0, 0%, 28%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 24%)" onclick="changeThemeColors('hsl(0, 0%, 24%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 20%)" onclick="changeThemeColors('hsl(0, 0%, 20%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 16%)" onclick="changeThemeColors('hsl(0, 0%, 16%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 12%)" onclick="changeThemeColors('hsl(0, 0%, 12%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 8%)" onclick="changeThemeColors('hsl(0, 0%, 8%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 4%)" onclick="changeThemeColors('hsl(0, 0%, 4%)', '#ffffff')"></div>
+                    <div style="background-color: hsl(0, 0%, 0%)" onclick="changeThemeColors('hsl(0, 0%, 0%)', '#ffffff')"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- spectrum theme primary color picker -->
+              <div id="theme-primary-color" class="tab-pane fade">
+                <form class="text-center" style="width:100%; height:100%">
+                  <input id="spectrum-theme-primary-color-picker" type='text' />
+                </form>
+              </div>
+
+              <!-- spectrum theme secondary color picker -->
+              <div id="theme-secondary-color" class="tab-pane fade">
+                <form class="text-center" style="width:100%; height:100%">
+                  <input id="spectrum-theme-secondary-color-picker" type='text' />
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-color pull-left" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- END COLOR MODAL: modal opens upon click of navbar group link (fire glyphicon, logo, & dropdown arrow). -->
+
+  <!-- BEGIN SIGN UP MODAL: Sign up modal opens upon click of navbar sign up link. -->
+
+  <div class="modal fade" id="sign-up" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Sign Up</h3>
+          <span>Already have an account? <a id="open-login" href="#">Login</a></span>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <form action="">
+                <div class="form-group col-sm-6">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="firstName">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName">
+                </div>
+                <div class="form-group col-sm-12">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group col-sm-12">
+                  <label for="username">Username <small>(only letters, numbers, and underscores)</small></label>
+                  <input type="text" class="form-control" id="username">
+                </div>
+                <div class="form-group col-sm-12">
+                  <label for="pwd">Password <small>(minimum 6 characters)</small></label>
+                  <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="col-sm-12">
+                  <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-default btn-color" onclick="alert('Sign Up Page')">Sign Up</button>
+                  <div style="margin: 10px 0 0 0">
+                    <small>By joining, you agree to the <a href="#" onclick="alert('Terms Page')">Terms</a> and <a href="#"onclick="alert('Privacy Policy Page')">Privacy Policy.</a></small>
+                  </div>
+                </div>
+              </form>
+      		  </div>
+      		</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-color" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END SIGN UP MODAL: Sign up modal opens upon click of navbar sign up link. -->
+
+  <!-- BEGIN LOGIN MODAL: Login modal opens upon click of navbar login link. -->
+
+  <div class="modal fade" id="login" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-theme-color glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-theme-color glyphicon-eye-close"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-color btn-default" onclick="alert('Login Page')"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-color btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a id="open-sign-up" href="#">Sign Up</a></p>
+          <p>Forgot <a id="open-forgot-password" href="#">Password?</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- END LOGIN MODAL: Login modal opens upon click of navbar login link. -->
+
+  <!-- BEGIN FORGOT PASSWORD MODAL: Forgot password modal opens upon click of login modal footer forgot password link. -->
+
+  <div id="forgot-password" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Forgot your password?</h3>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form action="">
+              <label for="email"><span class="glyphicon glyphicon-theme-color glyphicon-envelope"></span> Email</label>
+              <input type="email" class="form-control" placeholder="Enter email address">
+              <div style="margin: 10px 0 0 0">
+                <button type="submit" class="btn btn-default btn-color" onclick="alert('Reset Password Instructions Page')">Send me reset password instructions</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-color" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END FORGOT PASSWORD MODAL: Forgot password modal opens upon click of login modal footer forgot password link. -->
+
+  <!-- BEGIN IMAGE MODAL: opens upon click of polaroid image card in portfolio section -->
+
+  <div id="image-modal" class="image-modal">
+    <span class="close-image-modal" onclick="document.getElementById('image-modal').style.display = 'none'">×</span>
+    <img id="img-clicked" class="image-modal-content" />
+    <div id="image-modal-caption"></div>
+  </div>
+
+  <!-- END IMAGE MODAL: opens upon click of polaroid image card in portfolio section -->
+
+<!-- END MODALS -->
+
+</body>
+</html>

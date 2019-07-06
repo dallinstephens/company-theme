@@ -1,0 +1,908 @@
+/* BEGIN THEME COLORS */
+
+  /* theme colors css variables */
+  :root {
+    --theme-primary-color: #990000; /* red - theme color */
+    --theme-secondary-color: #ffffff; /* white if darker theme color, black if lighter theme color */
+  }
+
+  /* glyphicon theme color & hover transition */
+  .glyphicon-theme-color {
+    color: var(--theme-primary-color);
+    -webkit-transition: color 2s; /* For Safari 3.1 to 6.0 */
+    transition: color 2s;
+  }
+
+  /* glyphicon theme hover color with transition */
+  .glyphicon-theme-color:hover {
+    color: var(--theme-secondary-color);
+  }
+
+  /* button theme color */
+  .btn-theme-color {
+    background-color: var(--theme-primary-color);
+    color: var(--theme-secondary-color);
+  }
+
+  /* button theme hover color */
+  .btn-theme-color:hover {
+    background-color: var(--theme-secondary-color);
+    color: var(--theme-primary-color);
+    border-color: 1px solid var(--theme-primary-color);
+  }
+
+  /* grey background for about section (strategy subsection), portfolio section, & contact section */
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+
+/* END THEME COLORS */
+
+/* BEGIN ALL BOOTSTRAP MODALS: corrects strange scrollbar & right margin modal behavior */
+
+  /* show vertical scrollbar when modal opens */
+  .modal-open .modal {
+      overflow-y:scroll;
+  }
+
+  /* this helps correct right padding issue when modal opens */
+  .modal-open .topnavbar-wrapper {
+      padding-right:17px;
+  }
+
+/* END ALL BOOTSTRAP MODALS: corrects strange scrollbar & right margin modal behavior */
+
+/* BEGIN ANIMATION: SLIDE IN ELEMENTS */
+
+  /* slide animation element hidden initially */
+  .slide-animation {visibility:hidden;}
+
+  /* slide animation setup */
+  .slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    /* Make the element visible */
+    visibility: visible;
+  }
+
+  /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+/* END ANIMATION: SLIDE IN ELEMENTS */
+
+/* BEGIN NAVIGATION BAR */
+
+  /* navbar color */
+  .navbar {
+    background-color: var(--theme-primary-color);
+  }
+
+  /* BEGIN NAVBAR LINK GROUP (FIRE GLYPHICON WITH LOGO & DROPDOWN ARROW) */
+
+    /* group (fire glyphicon with logo & dropdown arrow) styling: text color, padding, & no underline */
+    .navbar-brand {
+      color: var(--theme-secondary-color);
+      padding:13px;
+      text-decoration: none;
+    }
+
+    /* group (fire glyphicon with logo & dropdown arrow) hover background-color & hover text color */
+    .navbar-brand:hover {
+      background-color: var(--theme-secondary-color);
+      color: var(--theme-primary-color) !important;
+    }
+
+    /* BEGIN NAVBAR FIRE GLYPHICON */
+
+      /* glyphicon animation on load & transition on hover */
+      #logo .glyphicon {
+        /* for animation upon load of page */
+        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 2s;
+
+        /* for transition on hover */
+        -webkit-transition: transform 2s; /* For Safari 3.1 to 6.0 */
+        transition: transform 2s;
+      }
+
+      /* glyphicon animation upon load of page: Safari 4.0 - 8.0 */
+      @-webkit-keyframes example {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(1440deg);}
+      }
+
+      /* glyphicon animation upon load of page: Standard syntax */
+      @keyframes example {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(1440deg);}
+      }
+
+      /* for transition on hover */
+      #logo .glyphicon:hover {
+        transform: rotate(1440deg);
+      }
+
+    /* END NAVBAR FIRE GLYPHICON */
+
+  /* END NAVBAR LINK GROUP (FIRE GLYPHICON WITH LOGO & DROPDOWN ARROW) */
+
+  /* BEGIN NAVBAR LINKS (ABOUT, SERVICES, PORTFOLIO, PRICING, CONTACT, SIGN UP, & LOGIN) */
+
+    /* horizontal space between navbar links */
+    .navbar-nav > li a {
+      padding-left:13px;
+      padding-right:13px;
+    }
+
+    /* navbar link text color */
+    .navbar li a {
+      color: var(--theme-secondary-color) !important;
+    }
+
+    /* navbar link hover background-color & hover text color */
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: var(--theme-primary-color) !important;
+      background-color: var(--theme-secondary-color) !important;
+    }
+
+    /* scrollspy positioning for links (about, services, portfolio, pricing, & contact)*/
+    #about, #services, #portfolio, #pricing, #contact {
+      padding: 60px 15px;
+    }
+
+  /* END NAVBAR LINKS (ABOUT, SERVICES, PORTFOLIO, PRICING, CONTACT, SIGN UP, & LOGIN) */
+
+  /* BEGIN NAVBAR MENU ICON-BAR (3 HORIZONTAL BARS): ONLY SHOWS UP ON SMALLER SCREENS */
+
+    /* menu icon-bar color */
+    .navbar-toggle .icon-bar {
+      background-color: var(--theme-secondary-color);
+    }
+
+    /* menu hover background-color around icon-bar */
+    .navbar-toggle:hover {
+      background-color: var(--theme-secondary-color); /* background-color around icon-bar */
+    }
+
+    /* menu icon-bar hover color */
+    .navbar-toggle:hover .icon-bar {
+      background-color: var(--theme-primary-color);
+    }
+
+  /* END NAVBAR MENU ICON-BAR (3 HORIZONTAL BARS): ONLY SHOWS UP ON SMALLER SCREENS */
+
+/* END NAVIGATION BAR */
+
+/* BEGIN WEBSITE HEADER */
+
+  /* jumbotron */
+  .jumbotron {
+    padding: 100px;
+    background-color: var(--theme-primary-color);
+    color: var(--theme-secondary-color);
+  }
+
+/* END WEBSITE HEADER */
+
+/* BEGIN ABOUT SECTION (INCLUDES ABOUT SUBSECTION & STRATEGY SUBSECTION) */
+
+  /* size of about glyphicon & strategy glyphicon */
+  #about .glyphicon-size, #strategy .glyphicon-size {
+    font-size: 200px;
+  }
+
+  /* strategy subsection padding */
+  #strategy {
+    padding: 60px 15px;
+  }
+
+/* END ABOUT SECTION (INCLUDES ABOUT SUBSECTION & STRATEGY SUBSECTION) */
+
+/* BEGIN SERVICES SECTION */
+
+  /* top & bottom padding around each service */
+  #services > div > div {
+    padding: 30px 0;
+  }
+
+  /* size of each glyphicon & transition setup for each glyphicon */
+  #services .slide-animation > .glyphicon {
+    font-size: 50px;
+    -webkit-transition: transform 2s, color 2s; /* For Safari 3.1 to 6.0 */
+    transition: transform 2s, color 2s;
+  }
+
+  /* hover transition for each glyphicon */
+  #services .slide-animation:hover > .glyphicon {
+    transform: rotateY(360deg);
+    color: var(--theme-secondary-color);
+  }
+
+/* END SERVICES SECTION */
+
+/* BEGIN PORTFOLIO SECTION */
+
+  /* BEGIN POLAROID CARDS */
+
+    /* styling for polaroid card */
+    .polaroid {
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+      border: 3px solid #ffffff;
+      cursor: pointer; /* show cursor hand */
+    }
+
+    /* darken shadow around polaroid card upon hover */
+    .polaroid:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
+    }
+
+    /* increase contrast of image upon hover of polaroid card */
+    .polaroid:hover img {
+      -webkit-filter: contrast(150%);
+      filter: contrast(150%);
+    }
+
+  /* END POLAROID CARDS */
+
+  /* BEGIN CAROUSEL */
+
+    /* carousel title label (located on top of carousel): position & color of carousel label */
+    #myCarousel h2 {
+      position: relative;
+      top: 50px;
+      margin: 0;
+      padding: 0;
+      color: var(--theme-secondary-color);
+    }
+
+    /* carousel background-color & padding on bottom of inside of carousel */
+    #myCarousel {
+      background-color: var(--theme-primary-color);
+      padding: 0 0 100px 0;
+    }
+
+    /* adds margin bottom space (grey space from class .bg-grey) to bottom of carousel */
+    #myCarousel {
+      margin: 0 0 80px 0;
+    }
+
+    /* carousel item text vertical positioning & carousel item h3 text color */
+    .item h3 {
+      margin: 95px 0 0 0;
+      color: var(--theme-secondary-color);
+    }
+
+    /* carousel item p text color */
+    .item p {
+      color: var(--theme-secondary-color);
+    }
+
+    /* carousel previous & next arrow color */
+    .carousel-control.right, .carousel-control.left {
+      /* Background-image around previous & next arrows is included here.
+      To remove background-image around previous & next arrows, insert "background-image: none;" into the code here. */
+      color: var(--theme-secondary-color);
+    }
+
+    /* border-color for carousel circle indicator */
+    .carousel-indicators li {
+      border-color: var(--theme-secondary-color);
+    }
+
+    /* fill color for active carousel circle indicator */
+    .carousel-indicators li.active {
+      background-color: var(--theme-secondary-color);
+    }
+
+  /* END CAROUSEL */
+
+/* END PORTFOLIO SECTION */
+
+/* BEGIN PRICING SECTION */
+
+  /* BEGIN POLAROID PRICING PANEL */
+
+    /* showdow & hand cursor for polaroid pricing panel */
+    .panel {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer; /* show cursor hand */
+    }
+
+    /* darken shawdow on polaroid pricing panel upon hover */
+    .panel:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
+    }
+
+    /* border-color around polaroid pricing panel */
+    .panel-default {
+      border-color: var(--theme-primary-color);
+    }
+
+    /* background-color, color, & text font-size of polaroid pricing panel heading */
+    .panel > .panel-heading {
+      background-color: var(--theme-primary-color);
+      color: var(--theme-secondary-color);
+      font-size:25px !important;
+    }
+
+    /* background-color of polaroid pricing panel body */
+    .panel-body {
+      background-color: #ffffff;
+    }
+
+    /* top & bottom padding for bullets inside poloroid pricing panel body */
+    .panel-body > ul > li {
+      padding:5px 0;
+    }
+
+    /* background-color & text color of polaroid pricing panel footer */
+    .panel-footer {
+      background-color: var(--theme-primary-color);
+      color: var(--theme-secondary-color);
+    }
+
+    /* background-color & text color of button inside poloroid panel footer */
+    .panel-footer .btn-color {
+      background-color: var(--theme-secondary-color);
+      color: var(--theme-primary-color);
+    }
+
+    /* hover background-color, hover text color, & hover border color of button inside poloroid panel footer */
+    .panel-footer .btn-color:hover {
+      background-color: var(--theme-primary-color);
+      color: var(--theme-secondary-color);
+      border: 1px solid var(--theme-secondary-color);
+    }
+
+  /* END POLAROID PRICING PANEL */
+
+/* END PRICING SECTION */
+
+/* BEGIN CONTACT SECTION */
+
+  /* padding around contact info */
+  #contact-info {
+    padding: 15px;
+  }
+
+  /* padding around form */
+  #contact-form {
+    padding: 15px;
+  }
+
+/* END CONTACT SECTION */
+
+/* BEGIN MODALS */
+
+  /* BEGIN COLOR MODAL: modal opens upon click of group link (fire glyphicon, logo, & dropdown arrow). */
+
+    /* BEGIN COLOR MODAL HEADER */
+
+      /* modal header background-color, glyphicon, & text color */
+      #logo-color-modal .modal-header, #logo-color-modal h4 {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color) !important;
+      }
+
+      /* modal header close button styling */
+      #logo-color-modal .close {
+        padding: 0 10px;
+        opacity: 1;
+        color: var(--theme-secondary-color) !important;
+        font-size: 25px;
+        border-radius:5px;
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* modal header hover close button styling */
+      #logo-color-modal .close:hover {
+        padding: 0 10px;
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color) !important;
+      }
+
+    /* END COLOR MODAL HEADER */
+
+    /* BEGIN COLOR MODAL BODY */
+
+      /* background-color surrounding tabs & tab body content inside modal body */
+      .modal-body {
+        background-color: #ffffff; /* white */
+      }
+
+      /* BEGIN TABS: tab only (not tab body content) */
+
+        /* active tab background-color & transparent bottom border */
+        .nav-tabs > .active > a {
+          border-bottom-color: transparent !important;
+          background-color: #f2f2f2 !important;
+        }
+
+        /* active tab background-color does not change on hover */
+        .nav-tabs > .active > a:hover {
+          background-color: #f2f2f2 !important;
+        }
+
+        /* font-size of glyphicon on each tab */
+        .nav-tabs .glyphicon-size {
+          font-size: 100%;
+        }
+
+        /* center aligns glyphicons on tabs */
+        .nav-tabs {
+           text-align: center;
+        }
+
+        /* no horizontal space between tabs */
+        .nav-tabs > li {
+          padding: 0;
+        }
+
+        /* tab border-color, tab background-color, & horizontal space between tabs */
+        .nav-tabs > li > a {
+          border: 1px solid #000000 !important;
+          background-color: #d9d9d9;
+          margin-right: 0; /* removes horizontal space between tabs */
+        }
+
+        /* hover tab background-color */
+        .nav-tabs > li > a:hover {
+          background-color: #bfbfbf !important;
+        }
+
+      /* END TABS: tab only (not tab body content) */
+
+      /* BEGIN TAB BODY CONTENT */
+
+        /* tab body styling */
+        .tab-content {
+          background-color: #f2f2f2; /* light grey */
+          color: #000000;
+          padding:0 0px;
+          border-left: 1px solid #000000;
+          border-right: 1px solid #000000;
+          border-bottom: 1px solid #000000;
+        }
+
+        /* BEGIN QUICK THEME COLOR PICKER TAB BODY CONTENT */
+
+          /* left & right spacing for quick theme color picker tab body content that contains theme color blocks */
+          .tab-content > div#quick-theme-colors > .row.spacing {
+            margin: 0px 2px; /* 2px for left & right spacing accounts for the missing 2px on farthest left & farthest right blocks on the next block of code */
+          }
+
+          /* left & right padding space between color blocks */
+          .tab-content > div > .row.spacing > [class*='col-'] {
+            padding: 0 2px; /* 4px of left & right spacing between color blocks (since 2px + 2px = 4px) & 2px on farthest left & farthest right blocks */
+          }
+
+          /* color block width (fill 100% width of column) & height */
+          .tab-content > div > div > div > div {
+            width: 100%;
+            height: 30px;
+            border: 5px solid transparent; /* stabilize for color block hover */
+            margin: 4px 0px; /* top & bottom space between color blocks */
+          }
+
+          /* color block hover border color */
+          .tab-content > div > div > div > div:hover {
+            border: 5px solid #00ff00;
+          }
+
+        /* END QUICK THEME COLOR PICKER TAB CONTENT */
+
+        /* BEGIN THEME PRIMARY & SECONDARY COLOR PICKERS */
+
+          /* fill 100% width of tab body with spectrum color picker & color pallete */
+          .spectrum-color-picker {
+            width: 100%;
+          }
+
+          /* fill 45% width of tab body with spectrum color picker; the other width is taken up by the palette. */
+          .spectrum-color-picker > div {
+            width: 45%;
+            border: 1px solid transparent;
+          }
+
+          /* 100% width & remove palette on smaller screens */
+          @media only screen and (max-width: 700px){
+            .spectrum-color-picker > div {
+              width: 95.5%;
+            }
+            .sp-palette {
+              display: none;
+            }
+          }
+
+        /* END THEME PRIMARY & SECONDARY COLOR PICKERS */
+
+      /* END TAB BODY CONTENT */
+
+    /* END COLOR MODAL BODY */
+
+    /* BEGIN COLOR MODAL FOOTER */
+
+      /* modal footer background-color */
+      #logo-color-modal .modal-footer {
+        background-color: var(--theme-primary-color);
+      }
+
+      /* modal footer button background-color & button text color */
+      #logo-color-modal .modal-footer .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* modal footer hover button background-color & hover button text color */
+      #logo-color-modal .modal-footer .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+      }
+
+    /* END COLOR MODAL FOOTER */
+
+  /* END COLOR MODAL: modal opens upon click of group link (fire glyphicon, logo, & dropdown arrow). */
+
+  /* BEGIN SIGN UP MODAL: Sign up modal opens upon click of navbar sign up link. */
+
+    /* BEGIN SIGN UP MODAL HEADER */
+
+      /* sign up modal header background-color & text color and title h4 background-color & text color */
+      #sign-up .modal-header, #sign-up h4 {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color) !important;
+      }
+
+      /* sign up modal header link color & underlined link */
+      #sign-up .modal-header a {
+        color: var(--theme-secondary-color);
+        text-decoration: underline;
+      }
+
+      /* sign up modal header hover link background-color & hover text color */
+      #sign-up .modal-header a:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+      }
+
+      /* sign up modal header close button styling */
+      #sign-up .close {
+        padding: 0 10px;
+        opacity: 1;
+        color: var(--theme-secondary-color) !important;
+        font-size: 40px;
+        border-radius:5px;
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* sign up modal header close button hover background-color & hover text color */
+      #sign-up .close:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color) !important;
+      }
+
+    /* END SIGN UP MODAL HEADER */
+
+    /* BEGIN SIGN UP MODAL BODY */
+
+      /* sign up modal body background-color */
+      #sign-up .modal-body {
+        background-color: #f2f2f2;
+      }
+
+      /* sign up modal body button styling */
+      #sign-up .modal-body .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* sign up modal body button hover styling */
+      #sign-up .modal-body .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+        border: 1px solid var(--theme-primary-color);
+      }
+
+    /* END SIGN UP MODAL BODY */
+
+    /* BEGIN SIGN UP MODAL FOOTER */
+
+      /* sign up modal footer background-color & text color */
+      #sign-up .modal-footer {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* sign up modal footer button styling */
+      #sign-up .modal-footer .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* sign up modal footer button hover styling */
+      #sign-up .modal-footer .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+      }
+
+      /* END SIGN UP MODAL FOOTER */
+
+  /* END SIGN UP MODAL: Sign up modal opens upon click of navbar sign up link. */
+
+  /* BEGIN LOGIN MODAL: Login modal opens upon click of navbar login link. */
+
+    /* BEGIN LOGIN MODAL HEADER */
+
+      /* login modal header background-color & text color and title h4 background-color & text color */
+      #login .modal-header, #login h4 {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color) !important;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      /* login modal header close button styling */
+      #login .close {
+        padding: 0 10px;
+        opacity: 1;
+        color: var(--theme-secondary-color) !important;
+        font-size: 40px;
+        border-radius:5px;
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* login modal header close button hover background-color & hover text color */
+      #login .close:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color) !important;
+      }
+
+    /* END LOGIN MODAL HEADER */
+
+    /* BEGIN LOGIN MODAL BODY */
+
+      /* login modal body background-color */
+      #login .modal-body {
+        background-color: #ffffff;
+      }
+
+      /* login modal body button styling */
+      #login .modal-body .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* login modal body button hover styling */
+      #login .modal-body .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+        border: 1px solid var(--theme-primary-color);
+      }
+
+    /* END LOGIN MODAL BODY */
+
+    /* BEGIN LOGIN MODAL FOOTER */
+
+      /* login modal footer background-color & text color */
+      #login .modal-footer {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* login modal footer button styling */
+      #login .modal-footer .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* login modal footer button hover styling */
+      #login .modal-footer .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+      }
+
+      /* login modal footer forgot "password" link color & underlined link */
+      #login .modal-footer a {
+        color: var(--theme-secondary-color);
+        text-decoration: underline;
+      }
+
+      /* login modal footer hover link background-color & hover text color */
+      #login .modal-footer a:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+      }
+
+    /* END LOGIN MODAL FOOTER */
+
+  /* END LOGIN MODAL: Login modal opens upon click of navbar login link. */
+
+  /* BEGIN FORGOT PASSWORD MODAL: Forgot password modal opens upon click of link. */
+
+    /* BEGIN FORGOT PASSWORD MODAL HEADER */
+
+      /* forgot password modal header background-color & text color and title h4 background-color & text color */
+      #forgot-password .modal-header, #forgot-password h4 {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color) !important;
+      }
+
+      /* forgot password modal header close button styling */
+      #forgot-password .close {
+        padding: 0 10px;
+        opacity: 1;
+        color: var(--theme-secondary-color) !important;
+        font-size: 40px;
+        border-radius:5px;
+        border: 1px solid var(--theme-secondary-color);
+      }
+
+      /* forgot password modal header close button hover background-color & hover text color */
+      #forgot-password .close:hover {
+        padding: 0 10px;
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color) !important;
+      }
+
+    /* END FORGOT PASSWORD MODAL HEADER */
+
+    /* BEGIN FORGOT PASSWORD MODAL BODY */
+
+      /* forgot password modal body background-color */
+      #forgot-password .modal-body {
+        background-color: #f2f2f2;
+      }
+
+      /* forgot password modal body button styling */
+      #forgot-password .modal-body .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* forgot password modal body button hover styling */
+      #forgot-password .modal-body .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+        border: 1px solid var(--theme-primary-color);
+      }
+
+    /* END FORGOT PASSWORD MODAL BODY */
+
+    /* BEGIN FORGOT PASSWORD MODAL FOOTER */
+
+      /* forgot password modal footer background-color & text color */
+      #forgot-password .modal-footer {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* forgot password modal footer button styling */
+      #forgot-password .modal-footer .btn-color {
+        background-color: var(--theme-primary-color);
+        color: var(--theme-secondary-color);
+      }
+
+      /* forgot password modal footer button hover styling */
+      #forgot-password .modal-footer .btn-color:hover {
+        background-color: var(--theme-secondary-color);
+        color: var(--theme-primary-color);
+      }
+
+    /* END FORGOT PASSWORD MODAL FOOTER */
+
+  /* END FORGOT PASSWORD MODAL: Forgot password modal opens upon click of link. */
+
+  /* BEGIN POLAROID IMAGE CARD MODAL: shows image upon click of polaroid image card in portfolio section */
+
+    /* The Image Modal (background) */
+    .image-modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 10000; /* Sit on top */
+      padding-top: 80px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .image-modal-content {
+      margin: auto;
+      display: block;
+      width: 50%;
+      max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #image-modal-caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    /* Add Animation */
+    .image-modal-content, #image-modal-caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {-webkit-transform: scale(0)}
+      to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0.1)}
+      to {transform: scale(1)}
+    }
+
+    /* The Close Button */
+    .close-image-modal {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close-image-modal:hover,
+    .close-image-modal:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+      .image-modal-content {
+        width: 100%;
+      }
+    }
+
+  /* END POLAROID IMAGE CARD MODAL: shows image upon click of polaroid image card in portfolio section */
+
+/* END MODALS */
