@@ -103,14 +103,14 @@
   /* BEGIN NAVBAR LINK GROUP (FIRE GLYPHICON WITH LOGO & DROPDOWN ARROW) */
 
     /* group (fire glyphicon with logo & dropdown arrow) styling: text color, padding, & no underline */
-    .navbar-brand {
+    #logo.navbar-brand {
       color: var(--theme-secondary-color);
-      padding:13px;
+      padding:13px 25px 13px 13px; /* accounts for dropdown arrow */
       text-decoration: none;
     }
 
     /* group (fire glyphicon with logo & dropdown arrow) hover background-color & hover text color */
-    .navbar-brand:hover {
+    #logo.navbar-brand:hover {
       background-color: var(--theme-secondary-color);
       color: var(--theme-primary-color) !important;
     }
@@ -118,7 +118,7 @@
     /* BEGIN NAVBAR FIRE GLYPHICON */
 
       /* glyphicon animation on load & transition on hover */
-      #logo .glyphicon {
+      #logo.navbar-brand .glyphicon {
         /* for animation upon load of page */
         -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
         -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
@@ -143,11 +143,33 @@
       }
 
       /* for transition on hover */
-      #logo .glyphicon:hover {
+      #logo.navbar-brand:hover .glyphicon {
         transform: rotate(1440deg);
       }
 
     /* END NAVBAR FIRE GLYPHICON */
+
+    /* BEGIN NAVBAR DROPDOWN ARROW */
+
+      .dropdown-arrow-container {
+        position: relative;
+      }
+
+      .dropdown-arrow {
+        position: absolute;
+        top: 48%;
+        left: 100%;
+        margin-left:5px;
+        border-width: 4px;
+        border-style: solid;
+        border-color: var(--theme-secondary-color) transparent transparent transparent;
+      }
+
+      #logo.navbar-brand:hover .dropdown-arrow {
+        border-color: var(--theme-primary-color) transparent transparent transparent;
+      }
+
+    /* END NAVBAR DROPDOWN ARROW */
 
   /* END NAVBAR LINK GROUP (FIRE GLYPHICON WITH LOGO & DROPDOWN ARROW) */
 
