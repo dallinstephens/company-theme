@@ -433,6 +433,13 @@
   /* padding around contact info */
   #contact-info {
     padding: 15px;
+    #000000;
+  }
+
+  /* Fixes color of phone number on mobile devices */
+  a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
   }
 
   /* padding around form */
